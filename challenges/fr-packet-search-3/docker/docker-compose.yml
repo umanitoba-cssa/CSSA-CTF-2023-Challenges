@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+    fr-packet-search-3:
+        environment:
+            - FLAG=cssactf{1375-F1ND-7H3-HUM4N5}
+        container_name: fr-packet-search-3
+        image: docker.umanitobacssa.ca/cssa-ctf/fr-packet-search-3
+        restart: always
+        ports:
+            - "12100:80"

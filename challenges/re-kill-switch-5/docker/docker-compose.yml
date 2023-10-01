@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+    re-kill-switch-5:
+        environment:
+            - FLAG=cssactf{Ju57-4-qu1C5-p33K-f75bf4a5}
+        container_name: re-kill-switch-5
+        image: docker.umanitobacssa.ca/cssa-ctf/re-kill-switch-5
+        restart: always
+        ports:
+            - "1014:80"

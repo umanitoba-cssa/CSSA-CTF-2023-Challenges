@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+    be-buffaloverflow-2:
+        container_name: be-buffaloverflow-2
+        image: docker.umanitobacssa.ca/cssa-ctf/be-buffaloverflow-2:latest
+        restart: always
+        ports:
+            - "14001:9999"

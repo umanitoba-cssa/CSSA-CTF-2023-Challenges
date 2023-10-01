@@ -1,0 +1,10 @@
+Borealis.com Helping universities with Grade management
+
+API access
+
+/grades -> view the grades of students 
+/delGrades -> remove a grade from the student replace it with IP (In progress).
+/addGrade -> Add a grade to a student with an IP status for a class. 
+/updateTheGradesB -> Update the existing grades of students. Can send in multiple students and grades at a time in the form of a json dictionary.
+/delStudent -> For when the student is too much of a headache to deal with in class.
+/updateStudent -> Change the value of a student given their name. You can adjust address, phone number, academic status. 

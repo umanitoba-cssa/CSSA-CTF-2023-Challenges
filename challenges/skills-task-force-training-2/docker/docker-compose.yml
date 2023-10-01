@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+    skills-task-force-training-2:
+        container_name: skills-task-force-training-2
+        image: docker.umanitobacssa.ca/cssa-ctf/skills-task-force-training-2:latest
+        restart: always
+        ports:
+            - "10001:9999"

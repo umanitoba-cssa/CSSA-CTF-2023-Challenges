@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+    web-rob-delivers-mail:
+        environment:
+            - FLAG=cssactf{p057m4n-m411-d311v32y} 
+        container_name: web-rob-delivers-mail
+        image: docker.umanitobacssa.ca/cssa-ctf/web-rob-delivers-mail
+        restart: always
+        ports:
+            - "12003:80"

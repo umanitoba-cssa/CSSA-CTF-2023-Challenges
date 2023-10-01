@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+    web-rob-goes-on-the-attack:
+        environment:
+            - FLAG=cssactf{k111-411-7h3-415}
+        container_name: web-rob-goes-on-the-attack
+        image: docker.umanitobacssa.ca/cssa-ctf/web-rob-goes-on-the-attack
+        restart: always
+        ports:
+            - "12002:80"

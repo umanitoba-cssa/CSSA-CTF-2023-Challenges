@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Learning for University</title>
+    <script>
+      function viewGrades() {
+        if (
+          document.getElementById("status-enabled").classList.contains("hidden")
+        ) {
+          document.getElementById("status-enabled").classList.remove("hidden");
+          document.getElementById("status-disabled").classList.add("hidden");
+        } else {
+          document.getElementById("status-disabled").classList.remove("hidden");
+          document.getElementById("status-enabled").classList.add("hidden");
+        }
+      }
+    </script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0;
+    "
+  >
+    <div>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100vw;
+          height: 100vh;
+        "
+      >
+        <div
+          style="
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            width: fit-content;
+          "
+        >
+          <div id="status-enabled">
+            <h1>Learning for University</h1>
+            <h1>Hello Rob!</h1>
+            <div>
+              <button onClick="viewGrades()" type="button">View Grades</button>
+              <h2 id="flag"></h2>
+            </div>
+          </div>
+
+          <div id="status-disabled" class="hidden">
+            <h1>404 page not found</h1>
+            <div>
+              <button onClick="viewGrades()" type="button">Go back</button>
+              <h2 id="flag"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

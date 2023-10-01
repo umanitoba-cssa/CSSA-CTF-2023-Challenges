@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+    web-rob-deleted-passwords:
+        environment:
+            - FLAG=cssactf{R085-Pa22w0Rd-Wa2-Ph0unD}
+        container_name: web-rob-deleted-passwords
+        image: docker.umanitobacssa.ca/cssa-ctf/web-rob-deleted-passwords
+        restart: always
+        ports:
+            - "12000:80"

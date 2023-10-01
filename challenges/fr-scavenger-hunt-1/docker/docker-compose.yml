@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    robot-domain-1:
+        container_name: scavenger-hunt-1
+        image: docker.umanitobacssa.ca/cssa-ctf/scavenger-hunt-1
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: always
+        ports:
+            - "1111:80"

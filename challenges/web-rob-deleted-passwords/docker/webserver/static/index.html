@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>Learning for University</title>
+    <script>
+      function checkPassword() {
+        const key = document.getElementById("password-key").value;
+        fetch("/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ key: key }),
+        }).then((res) => {
+          if (res.status === 200) {
+            res.text().then((text) => {
+              document.getElementById("status-enabled").classList.add("hidden");
+              document
+                .getElementById("status-disabled")
+                .classList.remove("hidden");
+              document.getElementById("flag").innerHTML = text;
+            });
+          } else {
+            res.text().then((text) => {
+              document.getElementById("success-code").innerHTML =
+                "Invalid password";
+            });
+          }
+        });
+      }
+    </script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <div
+    id="Hidden secrets shhh"
+    class="hidden"
+    style="font-size: 30px; margin-bottom: 25px"
+  >
+    <div>Username: Christina, Password: 2718cwIkI\4]</div>
+    <div>Username: Rob, Password: ~nGk2h8S2X@</div>
+    <div>User: Noah, Password: @fbZ1l#7^5s=</div>
+  </div>
+  <body
+    style="
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0;
+    "
+  >
+    <div id="status-enabled">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100vw;
+          height: 100vh;
+        "
+      >
+        <div
+          style="
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            width: fit-content;
+          "
+        >
+          <h1>Learning for University</h1>
+          <div style="font-size: 30px; color: green; margin-bottom: 25px"></div>
+          <div
+            id="success-code"
+            style="font-size: 14px; margin-bottom: 5px"
+          ></div>
+          <form id="key-form">
+            <label for="userName-placeholder">Username</label>
+            <input
+              id="placeholder-key"
+              type="text"
+              value="Rob"
+              readonly="True"
+            />
+          </form>
+          <form id="key-form">
+            <label for="password-key">Password</label>
+            <input id="password-key" type="text" />
+          </form>
+          <button onClick="checkPassword()" type="button">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="status-disabled" class="hidden">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100vw;
+          height: 100vh;
+        "
+      >
+        <div
+          style="
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            width: fit-content;
+          "
+        >
+          <h1>Hello Rob!</h1>
+          <div>
+            <h2>Here is the flag:</h2>
+            <h2 id="flag"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

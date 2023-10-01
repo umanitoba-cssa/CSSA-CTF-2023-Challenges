@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>BOTNET GAMMA COMMAND SERVER</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+	</head>
+	<body style='background-color:black;color:white;font-family:monospace;margin: 0;'>
+		<div style="display: flex; align-items: center; justify-content: center; width:100vw; height: 100vh;">
+            <div style='text-align: center; border: 2px solid white; border-radius: 10px;padding:20px;width:fit-content;'>
+                <h1>BOTNET GAMMA COMMAND SERVER</h1>
+                <div style="font-size: 14px; margin-bottom:5px;">
+                    Network Status
+                </div>
+                <div id="status-enabled" style="font-size: 30px; color: green; margin-bottom:25px">
+                    ⬤ ONLINE
+                </div>
+                <div id="status-disabled" class="hidden" style="font-size: 30px; color: orangered; margin-bottom:25px">
+                    ⬤ OFFLINE
+                </div>
+                <div id="success-code" style="font-size: 14px; margin-bottom:5px;">
+                        
+                </div>
+                <form onsubmit="checkKey(); return false;" id="key-form">
+                    <label for="deactivation-key">Deactivation key:</label>
+                    <input id='deactivation-key' type="text" style="width:350px">
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function checkKey() {
+                const key = document.getElementById('deactivation-key').value
+                fetch('/deactivate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({key: key})
+                }).then(res => {
+                    if (res.status === 200) {
+                        localStorage.setItem('key', key)
+                        res.text().then(text => {
+                            document.getElementById('status-enabled').classList.add('hidden')
+                            document.getElementById('status-disabled').classList.remove('hidden')
+                            document.getElementById('success-code').innerHTML = text
+                            document.getElementById('key-form').classList.add('hidden')
+                        })
+                    } else {
+                        res.text().then(text => {
+                            document.getElementById('success-code').innerHTML = "Invalid key"
+                        })
+                    }
+                })
+            }
+
+            let savedKey = localStorage.getItem('key')
+            if (savedKey) {
+                document.getElementById('deactivation-key').value = savedKey
+                checkKey()
+            }
+        </script>
+	</body>
+</html>

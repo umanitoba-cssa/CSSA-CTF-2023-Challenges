@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+    be-american-dream:
+        container_name: be-american-dream
+        image: docker.umanitobacssa.ca/cssa-ctf/be-american-dream:latest
+        restart: always
+        ports:
+            - "11000:9999"

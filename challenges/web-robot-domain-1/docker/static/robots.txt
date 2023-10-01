@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /269f8e85827d452b945a59eb8892a8fb.html

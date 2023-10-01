@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>BOTNET UTILITY CENTER</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0;
+    "
+  >
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+      "
+    >
+      <div
+        style="
+          text-align: center;
+          border: 2px solid white;
+          border-radius: 10px;
+          padding: 20px;
+          width: fit-content;
+        "
+      >
+        <h1>BOTNET UTILITY CENTER</h1>
+        <div style="font-size: 14px; margin-bottom: 5px">Network Status</div>
+        <div
+          id="status-enabled"
+          style="font-size: 30px; color: green; margin-bottom: 25px"
+        >
+          ⬤ ONLINE
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.setInterval(() => {
+          getMessage(false);
+        }, 1000);
+        window.setInterval(() => {
+          getMessage(true);
+        }, 20000);
+      });
+
+      function getMessage(b) {
+        if (b) {
+          fetch("/message", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+        } else {
+          fetch("/message", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
