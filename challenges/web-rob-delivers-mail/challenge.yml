@@ -1,4 +1,4 @@
-name: '# Rob delivers mail'
+name: Rob delivers mail
 author: CSSA
 category: Web Exploitation
 description: 'Rob''s fight with AI is over. He''s returned home to relax. Unfortunately for him some new Mail needs to be sent via the Post to those fourth years who were asking about their grades. Knowing that sending a physical copy takes years you decide to update the grades on the Borealis website with Rob''s approval. Rob isn''t too sure what the URL to update grades is so hopefully you can Get some Help.
@@ -9,8 +9,7 @@ value: 400
 type: standard
 state: visible
 flags:
-- flag: cssactf{p057m4n-m411-d311v32y}
-  type: static
+- cssactf{p057m4n-m411-d311v32y}
 tags:
 - Hard
 files: []

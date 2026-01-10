@@ -1,4 +1,4 @@
-name: '# A Prime Example'
+name: A Prime Example
 author: CSSA
 category: Cryptography
 description: '`Ha! You dumb humans are so bad at cryptography that I decided to give you a head start, not that it will make a
@@ -17,8 +17,7 @@ value: 400
 type: standard
 state: visible
 flags:
-- flag: cssactf{"Those_Are_Some_Big_Primes"}
-  type: static
+- cssactf{"Those_Are_Some_Big_Primes"}
 tags:
 - Hard
 files:

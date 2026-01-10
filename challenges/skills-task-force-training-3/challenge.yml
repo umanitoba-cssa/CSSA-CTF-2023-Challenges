@@ -1,4 +1,4 @@
-name: '# task-force-training-3'
+name: task-force-training-3
 author: CSSA
 category: General Skills
 description: 'Excellent job! You seem to have the real makings of an Agent ready to kick some robot butt!
@@ -54,8 +54,7 @@ value: 100
 type: standard
 state: visible
 flags:
-- flag: cssactf{L1g7tN1nG-f4$T-m47H3M4t1c5-47b97eb9}
-  type: static
+- cssactf{L1g7tN1nG-f4$T-m47H3M4t1c5-47b97eb9}
 tags:
 - Easy
 files:

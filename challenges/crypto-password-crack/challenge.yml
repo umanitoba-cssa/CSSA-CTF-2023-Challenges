@@ -1,4 +1,4 @@
-name: '# Password Crack'
+name: Password Crack
 author: CSSA
 category: Cryptography
 description: 'You''re decryption skills are so weak that I encrypted this 7zip file with only 1 word. With all
@@ -13,8 +13,7 @@ value: 300
 type: standard
 state: visible
 flags:
-- flag: cssactf{you_brute_forced_it!!!}
-  type: static
+- cssactf{you_brute_forced_it!!!}
 tags:
 - Medium
 files:

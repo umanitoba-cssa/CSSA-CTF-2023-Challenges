@@ -1,4 +1,4 @@
-name: '# Kill Switch 5'
+name: Kill Switch 5
 author: CSSA
 category: Reverse Engineering
 description: Another validator binary. A DLL file, probably compiled from C#? You should be able to decompile this, see if you can figure out the key.
@@ -6,8 +6,7 @@ value: 350
 type: standard
 state: visible
 flags:
-- flag: cssactf{Ju57-4-qu1C5-p33K-f75bf4a5}
-  type: static
+- cssactf{Ju57-4-qu1C5-p33K-f75bf4a5}
 tags:
 - Hard
 files:

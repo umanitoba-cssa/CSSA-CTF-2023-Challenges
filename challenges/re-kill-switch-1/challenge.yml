@@ -1,4 +1,4 @@
-name: '# Kill Switch 1'
+name: Kill Switch 1
 author: CSSA
 category: Reverse Engineering
 description: The AI learned to create malware and managed to build several botnets for nefarious purposes. We were able to find the command servers but the malware kill switch requires a key. Our prompt engineers were able to trick the AI into giving us the source code for one of the key validation algorithms, can you reverse engineer a valid deactivation key?
@@ -6,8 +6,7 @@ value: 100
 type: standard
 state: visible
 flags:
-- flag: cssactf{c0mM4nD-4nd-C0nqu3R-1fea5e27}
-  type: static
+- cssactf{c0mM4nD-4nd-C0nqu3R-1fea5e27}
 tags:
 - Easy
 files:

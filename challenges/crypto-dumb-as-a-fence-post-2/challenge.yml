@@ -1,4 +1,4 @@
-name: '# Dumb as a Fence Post 2'
+name: Dumb as a Fence Post 2
 author: CSSA
 category: Cryptography
 description: 'Hmmm, maybe you''re smarter than I thought. Well try to crack this then!
@@ -12,12 +12,11 @@ description: 'Hmmm, maybe you''re smarter than I thought. Well try to crack this
   https://en.wikipedia.org/wiki/Rail_fence_cipher
 
   What about the space between the letters in the cipher?'
-value: 100
+value: 200
 type: standard
 state: visible
 flags:
-- flag: cssactf{sphinxofblackquartzjudgemyvow}
-  type: static
+- cssactf{sphinxofblackquartzjudgemyvow}
 tags:
 - Medium
 files:

@@ -1,4 +1,4 @@
-name: '# fr-packet-search-2'
+name: fr-packet-search-2
 author: CSSA
 category: Forensics
 description: The AI's messages are a little more hidden now, but there should still be something helpful hidden in them. What can you find in these messages we intercepted?
@@ -6,8 +6,7 @@ value: 150
 type: standard
 state: visible
 flags:
-- flag: cssactf{sp1cy_r080t_g0$$1p}
-  type: static
+- cssactf{sp1cy_r080t_g0$$1p}
 tags:
 - Easy
 files:

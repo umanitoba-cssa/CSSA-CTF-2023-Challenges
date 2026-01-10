@@ -1,4 +1,4 @@
-name: '# Robot Domain 2'
+name: Robot Domain 2
 author: CSSA
 category: Web Exploitation
 description: 'How dare you! Filthy humans are NOT permitted to see my secrets!! Our defenses have been upgraded, only agents of search engines can get in now!
@@ -13,8 +13,7 @@ value: 150
 type: standard
 state: visible
 flags:
-- flag: cssactf{g00G13b07-4T-y0u4-s3rV1cE-4f1272ee}
-  type: static
+- cssactf{g00G13b07-4T-y0u4-s3rV1cE-4f1272ee}
 tags:
 - Easy
 files: []
