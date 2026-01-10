@@ -22,5 +22,5 @@ flags:
 tags:
 - Medium
 files:
-- vuln
-- vuln.c
+- files/vuln
+- files/vuln.c

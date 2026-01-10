@@ -10,4 +10,4 @@ flags:
 tags:
 - Easy
 files:
-- validate.py
+- files/validate.py

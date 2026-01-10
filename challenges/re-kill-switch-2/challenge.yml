@@ -10,4 +10,4 @@ flags:
 tags:
 - Medium
 files:
-- validate.py
+- files/validate.py

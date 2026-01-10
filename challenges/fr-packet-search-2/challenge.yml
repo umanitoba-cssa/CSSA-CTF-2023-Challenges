@@ -10,4 +10,4 @@ flags:
 tags:
 - Easy
 files:
-- packet-search-2.pcap
+- files/packet-search-2.pcap

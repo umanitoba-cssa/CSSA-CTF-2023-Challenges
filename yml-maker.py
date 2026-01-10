@@ -29,7 +29,7 @@ def parse_readme(readme_path):
     
     lines = content.strip().split('\n')
     name = lines[0].strip()  # From first line of README
-    
+
     # Remove leading # if present
     if name.startswith('# '):
         name = name[2:]
@@ -102,7 +102,7 @@ def generate_challenge_yml(challenge_dir):
     if files_dir.exists() and files_dir.is_dir():
         for f in files_dir.iterdir():
             if f.is_file():
-                files.append(str(f.name))
+                files.append(f'files/{f.name}')
     
     # ============= CTFd STANDARD STRUCTURE =============
     challenge_yml = {

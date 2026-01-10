@@ -58,4 +58,4 @@ flags:
 tags:
 - Easy
 files:
-- connect.py
+- files/connect.py
