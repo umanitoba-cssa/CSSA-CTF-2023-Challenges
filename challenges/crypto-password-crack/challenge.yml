@@ -1,0 +1,21 @@
+name: '# Password Crack'
+author: CSSA
+category: Cryptography
+description: 'You''re decryption skills are so weak that I encrypted this 7zip file with only 1 word. With all
+
+  the words out there, by the time you try them I will have already taken everything over!
+
+
+  use this word list https://github.com/kkrypt0nn/wordlists/blob/main/passwords/password.txt
+
+  checkout hash cat'
+value: 300
+type: standard
+state: visible
+flags:
+- flag: cssactf{you_brute_forced_it!!!}
+  type: static
+tags:
+- Medium
+files:
+- message.7z

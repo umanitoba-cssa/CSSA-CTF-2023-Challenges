@@ -1,4 +1,7 @@
 # Dumb as a Fence Post 2
+- Cryptography
+- Medium
+- 200 Points
 
 ## Description
 

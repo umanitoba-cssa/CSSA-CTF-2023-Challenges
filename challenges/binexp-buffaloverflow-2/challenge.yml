@@ -1,0 +1,27 @@
+name: '# buffaloverflow-2'
+author: CSSA
+category: Binary Exploitation
+description: 'The AI has upgraded it''s security and the buffalo facts are even harder to get now! See if you can crack this binary too.
+
+
+  Connect with ncat:
+
+
+  `ncat buffaloverflow-2.ctf.umanitobacssa.ca 14001`
+
+
+  Or with netcat:
+
+
+  `nc buffaloverflow-2.ctf.umanitobacssa.ca 14001`'
+value: 250
+type: standard
+state: visible
+flags:
+- flag: cssactf{R37uRn-t0-8uFF4L0-Fac7$-2c14afb3}
+  type: static
+tags:
+- Medium
+files:
+- vuln
+- vuln.c

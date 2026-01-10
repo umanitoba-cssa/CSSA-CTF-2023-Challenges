@@ -1,0 +1,14 @@
+name: '# fr-packet-search-1'
+author: CSSA
+category: Forensics
+description: We've intercepted some network traffic that we believe is the AI sending messages to its botnets. Can you find anything useful hidden in the messages?
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{53cr3t_R0b0t_M3554g3}
+  type: static
+tags:
+- Easy
+files:
+- packet-search-1.pcap

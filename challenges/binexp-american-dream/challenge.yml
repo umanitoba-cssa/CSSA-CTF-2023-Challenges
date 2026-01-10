@@ -1,0 +1,25 @@
+name: '# american-dream'
+author: CSSA
+category: Binary Exploitation
+description: 'It seems the AI is trying to learn about our culture by creating an "american dream simulator". The gameplay is a bit... dull. I guess the goal is to buy a house, maybe give the game a shot and try to find a way to afford one?
+
+
+  Connect with netcat:
+
+
+  `nc american-dream.ctf.umanitobacssa.ca 11000`
+
+
+  Or with ncat:
+
+
+  `ncat american-dream.ctf.umanitobacssa.ca 11000`'
+value: 300
+type: standard
+state: visible
+flags:
+- flag: cssactf{Im4g1N3-8Uy1nG-4-H0u53-1n-Th15-3c0NomY-0876d38a}
+  type: static
+tags:
+- Medium
+files: []

@@ -1,0 +1,23 @@
+name: '# one-time-pad'
+author: CSSA
+category: Cryptography
+description: 'The AI system is learning slowly how to encrypt their messages! We were able to intercept a message over the wire it was sending to its other AI friend who lives across the world, but we were also able to intercept a message saying it was encrypted using one time pad. However the AI got lazy and only used a key that was 8 bytes, but the message is 21 bytes! See if we can use this oversight to our advantage.
+
+
+  Hints:
+
+  The key is encrypted in the format cssactf{<message>}
+
+  Convert your binary output to ascii via UTF
+
+  Repeat the 8 byte key to get the real key'
+value: 250
+type: standard
+state: visible
+flags:
+- flag: cssactf{Hey_friend,how_are_you?}
+  type: static
+tags:
+- Medium
+files:
+- ciphertext.txt

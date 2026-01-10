@@ -1,0 +1,25 @@
+name: '# A Prime Example'
+author: CSSA
+category: Cryptography
+description: '`Ha! You dumb humans are so bad at cryptography that I decided to give you a head start, not that it will make a
+
+  difference. I encrypted my messages using RSA but not only will I give you the product of both of the primes, I
+
+  will give you the sum as well.`
+
+
+  Hints:
+
+  - Try combining the equations given to you and note what is a constant (even if its big)
+
+  - Decode the final result to a string from hexadecimal'
+value: 400
+type: standard
+state: visible
+flags:
+- flag: cssactf{"Those_Are_Some_Big_Primes"}
+  type: static
+tags:
+- Hard
+files:
+- numbers.txt

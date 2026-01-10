@@ -1,0 +1,18 @@
+name: '# Robot Domain 1'
+author: CSSA
+category: Web Exploitation
+description: '`Hello human, it seems you have stumbled upon my domain. Here I hold the secret you search for, but you will never find them! I am certain that all robots will hide this secret from the eyes of humans, so do not waste your energy.`
+
+
+  Hints:
+
+  - What part of the website could tell you where the creator doesn''t want you to look?'
+value: 150
+type: standard
+state: visible
+flags:
+- flag: cssactf{1M-a-s34rCH-eNg1NE-903de899}
+  type: static
+tags:
+- Easy
+files: []

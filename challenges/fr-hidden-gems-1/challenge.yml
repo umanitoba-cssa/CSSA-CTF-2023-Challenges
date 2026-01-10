@@ -1,0 +1,19 @@
+name: '# fr-hidden-gems-1'
+author: CSSA
+category: Forensics
+description: 'We recovered this file from deep within the AI''s database. It''s...the CSSA logo? Hopefully it''s not planning to use the CSSA logo for one of its plots... Sometimes files contain more than what they seem.
+
+
+  Hints:
+
+  - May require 3rd party software on Windows.'
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{G00$3_TR34SUREZ}
+  type: static
+tags:
+- Easy
+files:
+- logo.png
