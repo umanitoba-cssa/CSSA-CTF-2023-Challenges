@@ -1,4 +1,4 @@
-name: '# task-force-training-1'
+name: task-force-training-1
 author: CSSA
 category: General Skills
 description: "Hello Agent! Glad to have you, we are going to need everyone we can to take down this rogue AI!\n\nWe want to offer some training for you to get you prepared for the challenges that lie ahead. We hope the skills you learn with us will enable you to tackle whatever barriers that artificially intelligent monster may throw in your way.\n\nLet's start simple. The AI often likes to communicate over TCP sockets, so let's make sure you are equipped for that. You'll need a tool like netcat or ncat. \n\nIf you are on Windows or Mac, you should grab ncat which is included with nmap. If you don't already have it, you can download and install it from [the nmap website](https://nmap.org/ncat/).\n\nIf you are on Linux, it should be enough to install netcat with your favorite package manager. On Ubuntu or Debian, you'd run `sudo apt install netcat`, but every distro is different.\n\nOnce you have ncat or netcat install, open a command prompt, powershell window, or terminal, and run one of\
@@ -7,8 +7,7 @@ value: 50
 type: standard
 state: visible
 flags:
-- flag: cssactf{aG3n7-1n-7ra1n1nG-f732262c}
-  type: static
+- cssactf{aG3n7-1n-7ra1n1nG-f732262c}
 tags:
 - Easy
 files: []

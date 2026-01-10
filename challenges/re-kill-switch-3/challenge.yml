@@ -1,4 +1,4 @@
-name: '# Kill Switch 3'
+name: Kill Switch 3
 author: CSSA
 category: Reverse Engineering
 description: This next command server uses Java. The bit math here seems tricky. Can you figure out the key? Looks like it should be 10 ASCII characters.
@@ -6,8 +6,7 @@ value: 250
 type: standard
 state: visible
 flags:
-- flag: cssactf{Ju57-4-b1T-0f-m4TH-bf6b47f3}
-  type: static
+- cssactf{Ju57-4-b1T-0f-m4TH-bf6b47f3}
 tags:
 - Medium
 files:

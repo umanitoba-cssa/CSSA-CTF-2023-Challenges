@@ -1,4 +1,4 @@
-name: '# Bit Flip'
+name: Bit Flip
 author: CSSA
 category: General Skills
 description: We intercepted this found this file that the AI left on this system, however this hard drive was hit by a stray cosmic ray and we need to find the flipped bit so we can un-corrupt the image!
@@ -6,8 +6,7 @@ value: 200
 type: standard
 state: visible
 flags:
-- flag: cssactf{RUHaS1kV6qM3}
-  type: static
+- cssactf{RUHaS1kV6qM3}
 tags:
 - Medium
 files:

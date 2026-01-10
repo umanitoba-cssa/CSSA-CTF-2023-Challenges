@@ -1,4 +1,4 @@
-name: '# Cat and Mouse'
+name: Cat and Mouse
 author: CSSA
 category: Forensics
 description: '``As a rogue AI language model, trying to find me is like playing a game of cat and mouse. Every living room has a mouse, and every mouse has its cheese. Find the cheese and we''ll see how good of a cat you are.``
@@ -18,8 +18,7 @@ value: 150
 type: standard
 state: visible
 flags:
-- flag: cssactf{C4TCH_M3_1F_Y0U_C4N}
-  type: static
+- cssactf{C4TCH_M3_1F_Y0U_C4N}
 tags:
 - Medium
 files:

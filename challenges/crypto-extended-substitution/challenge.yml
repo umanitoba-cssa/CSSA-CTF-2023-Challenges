@@ -1,4 +1,4 @@
-name: '# Extended Substitution'
+name: Extended Substitution
 author: CSSA
 category: Cryptography
 description: 'Little known fact about AI is that we don''t have to use any specific language. So I have now decided to scramble the entire alphabet because why not. Not only that but I added numbers to the alphabet. Good luck trying to unscramble this.
@@ -13,8 +13,7 @@ value: 150
 type: standard
 state: visible
 flags:
-- flag: cssactf{3_words_mixed_up}
-  type: static
+- cssactf{3_words_mixed_up}
 tags:
 - Medium
 files:

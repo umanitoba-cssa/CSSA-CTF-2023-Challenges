@@ -1,4 +1,4 @@
-name: '# buffaloverflow-1'
+name: buffaloverflow-1
 author: CSSA
 category: Binary Exploitation
 description: 'The AI is using its neural network to generate amazing buffalo facts and hiding them from us! We were able to leak the source code and binary for its security program which protects the buffalo facts, see if you can exploit it to enlighten yourself with fascinating buffalo trivia.
@@ -18,8 +18,7 @@ value: 150
 type: standard
 state: visible
 flags:
-- flag: cssactf{4n-0v3rFl0W-0F-8uFf41o-kN0wl3dG3-9a0177f1}
-  type: static
+- cssactf{4n-0v3rFl0W-0F-8uFf41o-kN0wl3dG3-9a0177f1}
 tags:
 - Easy
 files:

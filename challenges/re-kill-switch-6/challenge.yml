@@ -1,4 +1,4 @@
-name: '# Kill Switch 6'
+name: Kill Switch 6
 author: CSSA
 category: Reverse Engineering
 description: This is the last command server we could find. It seems to be using a native Linux binary to check the key. Probably needs to be decompiled, can you take a look?
@@ -6,8 +6,7 @@ value: 400
 type: standard
 state: visible
 flags:
-- flag: cssactf{C-7Hr0uGh-b1N4Ry-7e3002c9}
-  type: static
+- cssactf{C-7Hr0uGh-b1N4Ry-7e3002c9}
 tags:
 - Hard
 files:

@@ -1,4 +1,4 @@
-name: '# fr-hidden-gems-2'
+name: fr-hidden-gems-2
 author: CSSA
 category: Forensics
 description: This goes deeper than we thought. It looks like the AI has already gotten access to the CSSA's website somehow. We don't know exactly what it changed, but whatever it did to the website could hold a clue to stopping it.
@@ -6,8 +6,7 @@ value: 250
 type: standard
 state: visible
 flags:
-- flag: cssactf{3XEC_M0L3_1111}
-  type: static
+- cssactf{3XEC_M0L3_1111}
 tags:
 - Medium
 files: []

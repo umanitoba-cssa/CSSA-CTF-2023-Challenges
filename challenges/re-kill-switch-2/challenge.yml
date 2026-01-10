@@ -1,4 +1,4 @@
-name: '# Kill Switch 2'
+name: Kill Switch 2
 author: CSSA
 category: Reverse Engineering
 description: This next command server seems to check the key using a regular expression. Can you reverse engineer a valid key?
@@ -6,8 +6,7 @@ value: 200
 type: standard
 state: visible
 flags:
-- flag: cssactf{7h4T5-mY-r3gu14R-Ex9r35s10N-a3fde4f5}
-  type: static
+- cssactf{7h4T5-mY-r3gu14R-Ex9r35s10N-a3fde4f5}
 tags:
 - Medium
 files:

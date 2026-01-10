@@ -1,4 +1,4 @@
-name: '# Rob''s deleted password'
+name: Rob's deleted password
 author: CSSA
 category: Web Exploitation
 description: '"This damned AI" screamed Rob. He was working on grading assigments for some fourth year students who for some reason took a first year class? Suddenly, he was logged out and can''t get back into his account. This AI must have changed his password maybe the password was hidden somewhere on the web page?'
@@ -6,8 +6,7 @@ value: 100
 type: standard
 state: visible
 flags:
-- flag: cssactf{R085-Pa22w0Rd-Wa2-Ph0unD}
-  type: static
+- cssactf{R085-Pa22w0Rd-Wa2-Ph0unD}
 tags:
 - Easy
 files: []

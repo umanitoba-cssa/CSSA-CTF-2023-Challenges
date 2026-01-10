@@ -1,4 +1,4 @@
-name: '# Dumb as a Fence Post'
+name: Dumb as a Fence Post
 author: CSSA
 category: Cryptography
 description: 'Humans are a dumb as a fence post! So I think that this cipher will be right up your alley!
@@ -11,8 +11,7 @@ value: 200
 type: standard
 state: visible
 flags:
-- flag: cssactf{Thequickbrownfoxjumpsoverthelazydog}
-  type: static
+- cssactf{Thequickbrownfoxjumpsoverthelazydog}
 tags:
 - Medium
 files:

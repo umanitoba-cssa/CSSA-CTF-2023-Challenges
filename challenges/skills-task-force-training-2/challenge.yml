@@ -1,4 +1,4 @@
-name: '# task-force-training-2'
+name: task-force-training-2
 author: CSSA
 category: General Skills
 description: 'Great work Agent! Another skill you''ll need is the ability to convert between number bases and encodings. We have a server setup with some problems for you to try to get the hang of things:
@@ -21,8 +21,7 @@ value: 50
 type: standard
 state: visible
 flags:
-- flag: cssactf{7h4Ts-pR3tTy-84s3D-a7fa9d12}
-  type: static
+- cssactf{7h4Ts-pR3tTy-84s3D-a7fa9d12}
 tags:
 - Easy
 files: []

@@ -1,4 +1,4 @@
-name: '# Kill Switch 4'
+name: Kill Switch 4
 author: CSSA
 category: Reverse Engineering
 description: The AI is getting smarter and our prompt engineers are no longer able to make the AI leak the source code for the key validation. We were however able to find a backdoor into the command server and grab the binary for key validator. This one is using a JAR file, can you decompile it and reverse engineer a valid key?
@@ -6,8 +6,7 @@ value: 300
 type: standard
 state: visible
 flags:
-- flag: cssactf{s0-m4Ny-c0oK13s-1n-7h3-j4R-7ab7cf42}
-  type: static
+- cssactf{s0-m4Ny-c0oK13s-1n-7h3-j4R-7ab7cf42}
 tags:
 - Medium
 files:

@@ -30,6 +30,10 @@ def parse_readme(readme_path):
     lines = content.strip().split('\n')
     name = lines[0].strip()  # From first line of README
     
+    # Remove leading # if present
+    if name.startswith('# '):
+        name = name[2:]
+    
     # Category from README (using the categories list)
     category_pattern = '|'.join(CATEGORIES)
     category = re.search(rf'^\s*[-*]\s*({category_pattern})', content, re.MULTILINE)
@@ -109,12 +113,7 @@ def generate_challenge_yml(challenge_dir):
         'value': data['value'],          # Points value
         'type': data['type'],            # 'standard' or 'dynamic' (from README or default)
         'state': data['state'],          # 'visible' or 'hidden' (from README or default)
-        'flags': [                       
-            {
-                'flag': data['flag'],    # The actual flag
-                'type': data['flag_type'] # Flag type (from README or default)
-            }
-        ],
+        'flags': [data['flag']],         # Simple array of flag strings
         'tags': data['tags'],            # Array of tags (we use difficulty)
         'files': files                   # The files to upload
     }

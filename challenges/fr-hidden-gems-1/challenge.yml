@@ -1,4 +1,4 @@
-name: '# fr-hidden-gems-1'
+name: fr-hidden-gems-1
 author: CSSA
 category: Forensics
 description: 'We recovered this file from deep within the AI''s database. It''s...the CSSA logo? Hopefully it''s not planning to use the CSSA logo for one of its plots... Sometimes files contain more than what they seem.
@@ -11,8 +11,7 @@ value: 100
 type: standard
 state: visible
 flags:
-- flag: cssactf{G00$3_TR34SUREZ}
-  type: static
+- cssactf{G00$3_TR34SUREZ}
 tags:
 - Easy
 files:

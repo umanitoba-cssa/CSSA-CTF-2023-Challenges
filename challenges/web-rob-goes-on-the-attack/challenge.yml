@@ -1,4 +1,4 @@
-name: '# Rob goes on the Attack'
+name: Rob goes on the Attack
 author: CSSA
 category: Web Exploitation
 description: Rob has had it with these machine's messing with him. First it was changing his password then hiding web pages what next? It's time for attack Rob. He's found the webserver to attack he just needs your help to send a message that will Delete all their internal files for the users. You should send one message to /users fast so the AI can't fix their security! Help Rob destroy this AI so he can return to being a peaceful man teaching. And remember Ai's have a weak body aim there.
@@ -6,8 +6,7 @@ value: 250
 type: standard
 state: visible
 flags:
-- flag: cssactf{k111-411-7h3-415}
-  type: static
+- cssactf{k111-411-7h3-415}
 tags:
 - Medium
 files: []
