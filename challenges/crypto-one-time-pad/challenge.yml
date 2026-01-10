@@ -19,4 +19,4 @@ flags:
 tags:
 - Medium
 files:
-- ciphertext.txt
+- files/ciphertext.txt

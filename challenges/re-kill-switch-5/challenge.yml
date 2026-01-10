@@ -10,4 +10,4 @@ flags:
 tags:
 - Hard
 files:
-- Validator.dll
+- files/Validator.dll

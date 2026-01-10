@@ -22,5 +22,5 @@ flags:
 tags:
 - Easy
 files:
-- vuln
-- vuln.c
+- files/vuln
+- files/vuln.c
