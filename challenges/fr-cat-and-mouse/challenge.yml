@@ -1,0 +1,26 @@
+name: '# Cat and Mouse'
+author: CSSA
+category: Forensics
+description: '``As a rogue AI language model, trying to find me is like playing a game of cat and mouse. Every living room has a mouse, and every mouse has its cheese. Find the cheese and we''ll see how good of a cat you are.``
+
+
+  Pictures retrieved from Wikimedia Commons, courtesy of George Shuklin and Noah Wulf.
+
+
+  Hints:
+
+  - Perhaps what you''re searching for isn''t in what the image contains, but what the *file* contains.
+
+  - Fun fact: Zip files can be hidden in other kinds of files!
+
+  - Remember that files are just representations of 1s and 0s. How do you see those 1s and 0s? What is hidden in those 1s and 0s?'
+value: 150
+type: standard
+state: visible
+flags:
+- flag: cssactf{C4TCH_M3_1F_Y0U_C4N}
+  type: static
+tags:
+- Medium
+files:
+- Room.jpg

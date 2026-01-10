@@ -1,0 +1,14 @@
+name: '# fr-scavenger-hunt-1'
+author: CSSA
+category: Forensics
+description: We're detecting some strange patterns in the AI's outgoing messages. See if you can trace these abnormal files to their source.
+value: 150
+type: standard
+state: visible
+flags:
+- flag: cssactf{W3LC0M3_b@ck_2_U0FM}
+  type: static
+tags:
+- Easy
+files:
+- umanitoba.png
