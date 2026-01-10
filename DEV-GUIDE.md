@@ -166,9 +166,9 @@ What's great is if the challenge has already been uploaded, it'll be skipped so 
 
 ## How to know if this worked
 
-You should be able to see the challenges in the `/admin/challenges` of the CTFd website. If a challenge has files folder, the file contents of that folder should be in the challenge.
+You should be able to see the challenges in the `/admin/challenges` of the CTFd website. The metadata should also match what's in `challenge.yml`. If a challenge has files folder, the file contents of that folder should be in the challenge. If a challenge has a docker folder, the docker folder contents won't be visible in the website, but that doesn't mean something failed. You will just need to manually run `docker-compose up -d` and that's it. The challenge description should tell the user what they need to do.
 
-If a challenge has a docker folder, the docker folder contents won't be visible in the website, but that doesn't mean something failed. You will just need to manually run `docker-compose up -d` and that's it. The challenge description should tell the user what they need to do.
+Note: It can be hard to troubleshoot because there were times when it said "Success" in console, with no visible errors, and yet it still didn't show up on the website.
 
 ## These links might be helpful
 - https://github.com/CTFd/ctfcli
