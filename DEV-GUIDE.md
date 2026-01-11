@@ -1,29 +1,30 @@
-# CSSA CTF Easy Challenge Installation to CTFd
+# Automatic Challenge Installation to CTFd
 
 ## Overview 
 
-To automatically upload all of our challenges to the CTFd website, follow these steps. We will use ctfcli to upload our challenges to the website, and this ctfcli tool needs a `challenge.yml` for each challenge folder for it to work. Luckily, we made a script that automatically generates those yml files in the right folder. You must still check if the yml files contain the information you want, as we might have made things a default or a different value, and you no longer want to keep the same behaviour. 
+To automatically upload all of our challenges to the CTFd website, follow these steps. This guide assumes that the challenges are uploaded in a GitHub repository and follows a standard folder structure (e.g. have README.md, files/ folder if necessary, docker/ folder if necessary, etc. You should base the folder structure to this repo's). 
 
-Once that's done, we commit and push the changes to the challenges GitHub repository, like this one! After that, we will move to the proxmox server. Assuming we have the CTFd and its VM set up, you will then need to clone the challenges GitHub repository. Do this in the same folder as where your CTFd is in, so this repo. and the CTFd should be "siblings" and share the same parent folder. 
+We will use ctfcli to upload our challenges to the website, and this ctfcli tool needs a `challenge.yml` for each challenge folder for it to work. Luckily, we made a script that automatically generates those yml files in the right folder. You must still check if the yml files contain the information you want, as we might have made things a default or a different value, and you no longer want to keep the same behaviour. 
 
-Then, you need to run the install command on each challenge. That can be tiring, so we made a script for that, which will automatically install all the challenges and put them to the CTFd website. After this is done, you should be able to see the challenges in the `/admin/challenges` of the CTFd website. Note that if a challenge has a docker folder, you will need to manually run `docker-compose up -d`.
+Once that's done, you commit and push the changes to the challenges GitHub repository, like this one! After that, we will move to the proxmox server. Assuming we have the CTFd and its VM set up, you will then need to clone the challenges GitHub repository. Do this in the same folder as where your CTFd is in, so this repo. and the CTFd should be "siblings" and share the same parent folder. 
 
-A more detailed set-up instructions will follow.
+Then, you need to run the install command on each challenge. That can be tiring, so we made a script for that, which will automatically install all the challenges and put them to the CTFd website. After this is done, you should be able to see the challenges in the `/admin/challenges` page of the CTFd website. Note that if a challenge has a docker folder, you will need to manually run `docker-compose up -d` in that challenge folder in the VM console.
 
-## Generate challenge.yml
+A more detailed set-up instructions will follow below.
 
-You can generate the challenge.yml files for each challenge by installing a package and running the following scripts, one by one:
+## 1. Generate challenge.yml
+
+You should generate the challenge.yml files for each challenge by installing a package and running the following scripts, one by one:
 ```bash
 pip install pyyaml 
 python yml-maker.py
 ```
 
-### Challenge README Format
+### This is what the README of a challenge should look like:
 
+Each challenge must have a README.md file that follows the format below, so that the script `yml-maker.py` works properly. Also, this seems to be the standard README based on the existing challenges in our repos. Thus, this is what a README.md for a challenge should look like.
 
 **Note:** You can use either `-` or `*` for bullet points in the metadata section (Information under Challenge Name).
-
-Each challenge must have a README.md file that follows this format, so that the script `yml-maker.py` works properly. Also, this seems to be the standard README based on the existing challenges in our repos. Thus, this is what a README.md for a challenge should look like.
 
 ```markdown
 # Challenge Name
@@ -113,13 +114,13 @@ Calculate the parity and see which lines don't match and were thus affected. Alt
 `cssactf{Bit_By_Bit_I_Weep}`
 ```
 
-## Git
+## 2. Git
 
 Once you've ran the script, you should stage those files, commit, and push. Ideally in a new branch, make a PR, get approval, then merge.
 
 In a Proxmox's VM where you intend to put all your ctf-related code, and in the same folder as where CTFd is, which is likely the root folder of that VM, clone the GitHub repository where your challenges are in.
 
-## CTFCLI 
+## 3. CTFCLI 
 
 You will need to do the command IF you don't have CTFCLI yet.
 
@@ -145,10 +146,15 @@ Then, initialize it with this command. This will prompt you to put the URL where
 ctf init
 ```
 
-## Batch install script
+## 4. Batch-install the challenges
 
-At this time of writing, the command used to batch-install the challenges to the website is done by typing the following command in the console of the VM. This should be ran all at once. **You must do one of the following (first one is recommended) in the root folder of the cloned repository:**
+At this time of writing, the command used to batch-install the challenges to the website is done by typing the following command in the console of the VM. This should be ran all at once. 
 
+What's great is if the challenge has already been uploaded, it'll be skipped so there are no duplicates. If you need to update a challenge, you can use the `sync` command. More info on the links below.
+
+**You must do one of the following (first one is recommended) in the root folder of the cloned repository:**
+
+### Option 1
 ```bash
 for ch in challenges/*/; do
     echo "Installing ${ch%/}"
@@ -156,20 +162,19 @@ for ch in challenges/*/; do
 done
 ```
 
-Another option is this command below. We created `batch-install.py` to automate this further, but it has not been tested yet. It will be tested once we have this year's challenges.
+### Option 2
+We created `batch-install.py` to automate this further, but it has not been tested yet. It will be tested once we have this year's challenges.
 
 ```bash
 python batch-install.py
 ```
 
-What's great is if the challenge has already been uploaded, it'll be skipped so there are no duplicates. If you need to update a challenge, you can use the `sync` command. More info on the links below.
-
-## How to know if this worked
+## 5. How to know if this worked
 
 You should be able to see the challenges in the `/admin/challenges` of the CTFd website. The metadata should also match what's in `challenge.yml`. If a challenge has files folder, the file contents of that folder should be in the challenge. If a challenge has a docker folder, the docker folder contents won't be visible in the website, but that doesn't mean something failed. You will just need to manually run `docker-compose up -d` and that's it. The challenge description should tell the user what they need to do.
 
 Note: It can be hard to troubleshoot because there were times when it said "Success" in console, with no visible errors, and yet it still didn't show up on the website.
 
-## These links might be helpful
+## These links might be helpful in general
 - https://github.com/CTFd/ctfcli
 - https://docs.ctfd.io/docs/management/ctfcli/overview
